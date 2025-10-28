@@ -8,19 +8,20 @@ loginButton.addEventListener('click', () => {
     alert('Nama harus diisi, minimal 3 karakter.');
     return;
   }
-  
-  // Kirim nama ke server
   socket.emit('PLAYER_LOGIN', name);
   loginButton.disabled = true;
   loginButton.innerText = 'Memproses...';
 });
 
-// 1. Server membalas dengan sukses
 socket.on('LOGIN_SUCCESS', (data) => {
-  // Simpan ID & Nama pemain di browser
   localStorage.setItem('kim_player_id', data.id);
   localStorage.setItem('kim_player_name', data.name);
-  
-  // Pindahkan pemain ke halaman game
   window.location.href = '/game';
+});
+
+// Tambahkan ini: Handler jika login gagal (nama sudah ada)
+socket.on('LOGIN_FAILED', (message) => {
+  alert(`Login Gagal: ${message}`);
+  loginButton.disabled = false; // Aktifkan tombol lagi
+  loginButton.innerText = 'Masuk & Ambil Tiket';
 });

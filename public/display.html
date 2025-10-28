@@ -8,11 +8,22 @@
 </head>
 <body class="display-page">
   <div id="winner-toast"></div>
-  
+
   <div class="display-container">
-    <div class="last-number-box">
-      <div class="title">ANGKA TERAKHIR</div>
-      <div id="last-number-display">-</div>
+    <div class="left-panel">
+      <div class="last-number-box-small"> <div class="title">ANGKA TERAKHIR</div>
+        <div id="last-number-display">-</div>
+      </div>
+      <div class="game-info-box">
+         <div class="title">INFO PERMAINAN</div>
+         <div id="game-status-display">Status: Menunggu</div>
+         <div id="win-condition-display">Target: -</div>
+         <div id="winner-count-display">Pemenang: 0 / 10</div>
+      </div>
+       <div class="winner-list-box">
+           <div class="title">DAFTAR PEMENANG</div>
+           <ul id="winner-list"></ul>
+       </div>
     </div>
     <div class="number-board-box">
       <div class="title">PAPAN ANGKA (1-90)</div>

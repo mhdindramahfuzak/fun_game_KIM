@@ -16,16 +16,25 @@
       Angka Terakhir: <span id="last-number">-</span>
     </div>
   </header>
-  
+
   <div id="status-bar" class="status-idle">
-    Memuat data... Silakan tunggu.
+    Memuat data... Silakan tunggu. Target: <span id="win-condition-display">?</span>
   </div>
 
   <h2>3 Tiket Anda</h2>
-  <p>Klik pada angka di tiket Anda jika angkanya dipanggil. Selesaikan 1 baris untuk menang!</p>
-  
+  <p>Klik angka jika dipanggil. Selesaikan target untuk klaim!</p>
+
   <main id="tickets-container">
-    </main>
+    <div id="ticket-kuning" class="ticket-section ticket-kuning">
+        <h3>Tiket Kuning</h3>
+        </div>
+    <div id="ticket-hijau" class="ticket-section ticket-hijau">
+        <h3>Tiket Hijau</h3>
+        </div>
+     <div id="ticket-putih" class="ticket-section ticket-putih">
+        <h3>Tiket Putih</h3>
+        </div>
+  </main>
 
   <script src="/socket.io/socket.io.js"></script>
   <script src="/js/player.js"></script>
