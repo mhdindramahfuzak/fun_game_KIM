@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tiket Saya - Game KIM</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body class="game-page">
+  <header class="game-header">
+    <h1>Game KIM</h1>
+    <div class="player-info">
+      Pemain: <strong id="player-name">...</strong>
+    </div>
+    <div class="call-display-mini">
+      Angka Terakhir: <span id="last-number">-</span>
+    </div>
+  </header>
+  
+  <div id="status-bar" class="status-idle">
+    Memuat data... Silakan tunggu.
+  </div>
+
+  <h2>3 Tiket Anda</h2>
+  <p>Klik pada angka di tiket Anda jika angkanya dipanggil. Selesaikan 1 baris untuk menang!</p>
+  
+  <main id="tickets-container">
+    </main>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="/js/player.js"></script>
+</body>
+</html>

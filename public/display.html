@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Papan Angka - Game KIM</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body class="display-page">
+  <div id="winner-toast"></div>
+  
+  <div class="display-container">
+    <div class="last-number-box">
+      <div class="title">ANGKA TERAKHIR</div>
+      <div id="last-number-display">-</div>
+    </div>
+    <div class="number-board-box">
+      <div class="title">PAPAN ANGKA (1-90)</div>
+      <div id="number-board">
+        </div>
+    </div>
+  </div>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="/js/display.js"></script>
+</body>
+</html>
